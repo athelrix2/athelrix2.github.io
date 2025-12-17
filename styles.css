@@ -60,6 +60,9 @@ img {
 .header-logo-icon {
   width: 24px;
   height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
 }
 
 /* Hero Section - Home Page */
@@ -82,6 +85,13 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.hero-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .hero-logo svg {
@@ -273,11 +283,15 @@ img {
   border-radius: 24px;
   overflow: hidden;
   margin-bottom: 16px;
-  aspect-ratio: 9/16;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #333;
+}
+
+.screenshot-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
 }
 
 .screenshot-card h4 {
@@ -456,6 +470,9 @@ img {
 .footer-logo-icon {
   width: 24px;
   height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .footer-links {
