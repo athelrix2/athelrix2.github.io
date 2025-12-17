@@ -107,7 +107,7 @@ img {
 }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 24px;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 80px;
 }
@@ -124,19 +124,19 @@ img {
 }
 
 .product-content h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .product-content .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 24px;
 }
 
 .product-content .description {
-  font-size: 15px;
+  font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 24px;
   line-height: 1.7;
@@ -147,7 +147,7 @@ img {
 }
 
 .product-content ul li {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 12px;
   display: flex;
@@ -166,10 +166,10 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 14px 28px;
   background: #fff;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -208,13 +208,13 @@ img {
 }
 
 .vindr-logo-large {
-  width: 200px;
-  height: 200px;
+  width: 280px;
+  height: 280px;
   margin: 0 auto 60px;
 }
 
 .hero-vindr h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 400;
   font-family: 'Bitter', Georgia, serif;
   margin-bottom: 24px;
@@ -222,7 +222,7 @@ img {
 }
 
 .hero-vindr .tagline {
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -250,13 +250,13 @@ img {
 }
 
 .feature-card h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 .feature-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
 }
@@ -334,21 +334,21 @@ img {
 }
 
 .privacy-hero .subtitle {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 4px;
 }
 
 .privacy-hero .date {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
   margin-bottom: 40px;
 }
 
 .privacy-logo {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 60px;
 }
 
@@ -359,28 +359,28 @@ img {
 }
 
 .privacy-content h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   margin-top: 48px;
   margin-bottom: 16px;
 }
 
 .privacy-content h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   margin-top: 32px;
   margin-bottom: 12px;
 }
 
 .privacy-content h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 8px;
 }
 
 .privacy-content p {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 16px;
   line-height: 1.7;
@@ -392,9 +392,9 @@ img {
 }
 
 .privacy-content ul li {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   position: relative;
   padding-left: 16px;
 }
