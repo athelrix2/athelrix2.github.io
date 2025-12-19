@@ -281,16 +281,19 @@ input, textarea, select {
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--bg-primary);
+  background: #0a0a0a;
   padding-top: var(--header-height);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
   transition: all var(--transition-base);
 }
 
 .mobile-nav.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-nav-inner {
