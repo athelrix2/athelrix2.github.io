@@ -3,160 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vindr Privacy Policy - Useful Things</title>
+  <title>Vindr Privacy Policy | Useful Things</title>
   <meta name="description" content="Vindr Privacy Policy & Data Usage. Your health data is yours. We simply help you track and improve your fitness.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vindr Privacy Policy | Useful Things">
+  <meta property="og:description" content="Your health data is yours. We simply help you track and improve your fitness.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://usefulthingsllc.com/privacy.html">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="Images/Favicon.png">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <a href="index.html" class="header-logo">
-      <img class="header-logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
-      Useful Things
-    </a>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
+        <span>Useful Things</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="apps/vindr.html" class="nav-link">Apps</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="support.html" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="apps/vindr.html" class="mobile-nav-link">Apps</a>
+      <a href="support.html" class="mobile-nav-link">Support</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy</a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="privacy-hero">
-    <h1 class="vindr-title">Vindr</h1>
-    <p class="subtitle">PRIVACY POLICY & DATA USAGE</p>
-    <p class="date">Last Updated: November 2025</p>
-
-    <img class="privacy-logo" src="Images/Icon copy 4.png" alt="Vindr Logo">
+    <span class="section-label fade-in-up">Vindr</span>
+    <h1 class="fade-in-up delay-100">Privacy Policy</h1>
+    <p class="privacy-meta fade-in-up delay-200">Last Updated: November 2025</p>
   </section>
 
   <!-- Privacy Content -->
   <div class="privacy-content">
-    <h2>Overview</h2>
-    <p>Vindr is committed to protecting your privacy. This document explains how we collect, use, and protect your health and fitness data.</p>
+    <section class="privacy-section fade-in-up">
+      <h2>Overview</h2>
+      <p>Vindr is committed to protecting your privacy. This document explains how we collect, use, and protect your health and fitness data.</p>
+      <p><strong>The short version:</strong> All your data stays on your device. We don't collect, transmit, or share any personal information.</p>
+    </section>
 
-    <h2>Data We Access</h2>
-    <h3>Apple Health Data</h3>
-    <p>We request access to the following data from Apple Health:</p>
-    <ul>
-      <li>Heart Rate: Used to display real-time heart rate during workouts and calculate personalized training zones</li>
-      <li>Date of Birth: Used to calculate age for personalized heart rate zone calculations</li>
-      <li>Workout Data: We read and write workout sessions to maintain your fitness history</li>
-    </ul>
+    <section class="privacy-section fade-in-up">
+      <h2>Data We Access</h2>
 
-    <h2>How We Use Your Data</h2>
-    <h3>Heart Rate Monitoring</h3>
-    <ul>
-      <li>Heart rate data is displayed in real-time during workouts</li>
-      <li>Used to track time spent in different heart rate zones</li>
-      <li>Helps calculate workout intensity and training effectiveness</li>
-    </ul>
+      <h3>Apple Health Data</h3>
+      <p>We request access to the following data from Apple Health:</p>
+      <ul>
+        <li><strong>Heart Rate:</strong> Used to display real-time heart rate during workouts and calculate personalized training zones</li>
+        <li><strong>Date of Birth:</strong> Used to calculate age for personalized heart rate zone calculations</li>
+        <li><strong>Workout Data:</strong> We read and write workout sessions to maintain your fitness history</li>
+      </ul>
+    </section>
 
-    <h3>Personalized Heart Rate Zones</h3>
-    <ul>
-      <li>We calculate your maximum heart rate using the formula: 220 - age</li>
-      <li>Age is obtained from your Apple Health date of birth, or you can enter it manually as a fallback</li>
-      <li>Zones are calculated as percentages of your max heart rate:</li>
-    </ul>
-    <ul class="zone-list">
-      <li>Zone 1 (Easy): 50-60%</li>
-      <li>Zone 2 (Moderate): 60-70%</li>
-      <li>Zone 3 (Hard): 70-80%</li>
-      <li>Zone 4 (Very Hard): 80-90%</li>
-      <li>Zone 5 (Maximum): 90-100%</li>
-    </ul>
+    <section class="privacy-section fade-in-up">
+      <h2>How We Use Your Data</h2>
 
-    <h3>Workout Data Storage</h3>
-    <ul>
-      <li>All completed workouts are saved to Apple Health</li>
-      <li>Includes metrics: duration, distance, calories, power, speed, heart rate</li>
-      <li>Contains interval-by-interval statistics for detailed analysis</li>
-      <li>Stored locally on your device within the Apple Health database</li>
-    </ul>
+      <h3>Heart Rate Monitoring</h3>
+      <ul>
+        <li>Heart rate data is displayed in real-time during workouts</li>
+        <li>Used to track time spent in different heart rate zones</li>
+        <li>Helps calculate workout intensity and training effectiveness</li>
+      </ul>
 
-    <h2>Data Privacy & Security</h2>
-    <h3>Local Storage Only</h3>
-    <ul>
-      <li>ALL data remains on your device</li>
-      <li>We do NOT transmit any health data to external servers</li>
-      <li>We do NOT share your data with third parties</li>
-      <li>We do NOT use your data for advertising or analytics</li>
-    </ul>
+      <h3>Personalized Heart Rate Zones</h3>
+      <ul>
+        <li>We calculate your maximum heart rate using the formula: 220 - age</li>
+        <li>Age is obtained from your Apple Health date of birth, or you can enter it manually as a fallback</li>
+        <li>Zones are calculated as percentages of your max heart rate:
+          <ul style="margin-top: 8px;">
+            <li>Zone 1 (Easy): 50-60%</li>
+            <li>Zone 2 (Moderate): 60-70%</li>
+            <li>Zone 3 (Hard): 70-80%</li>
+            <li>Zone 4 (Very Hard): 80-90%</li>
+            <li>Zone 5 (Maximum): 90-100%</li>
+          </ul>
+        </li>
+      </ul>
 
-    <h3>User Control</h3>
-    <ul>
-      <li>You maintain full control over your health data</li>
-      <li>You can revoke access to Apple Health at any time via Settings &rarr; Privacy &rarr; Health</li>
-      <li>You can delete individual workouts from your history</li>
-      <li>Deleted workouts are removed from both the app and Apple Health</li>
-    </ul>
+      <h3>Workout Data Storage</h3>
+      <ul>
+        <li>All completed workouts are saved to Apple Health</li>
+        <li>Includes metrics: duration, distance, calories, power, speed, heart rate</li>
+        <li>Contains interval-by-interval statistics for detailed analysis</li>
+        <li>Stored locally on your device within the Apple Health database</li>
+      </ul>
+    </section>
 
-    <h3>Bluetooth Data</h3>
-    <ul>
-      <li>Bluetooth connection to your Echo Bike is local only</li>
-      <li>No workout or health data is transmitted over the internet</li>
-      <li>Bike metrics (power, speed, cadence) are processed locally</li>
-    </ul>
+    <section class="privacy-section fade-in-up">
+      <h2>Data Privacy & Security</h2>
 
-    <h2>Your Rights</h2>
-    <h4>You have the right to:</h4>
-    <ul>
-      <li>View all data collected about you within Apple Health</li>
-      <li>Delete any or all of your workout data</li>
-      <li>Revoke app access to Apple Health at any time</li>
-      <li>Request clarification about our data practices</li>
-    </ul>
+      <h3>Local Storage Only</h3>
+      <ul>
+        <li><strong>ALL data remains on your device</strong></li>
+        <li>We do NOT transmit any health data to external servers</li>
+        <li>We do NOT share your data with third parties</li>
+        <li>We do NOT use your data for advertising or analytics</li>
+      </ul>
 
-    <h3>Changes to This Policy</h3>
-    <p>We may update this privacy policy to reflect changes in:</p>
-    <ul>
-      <li>App functionality</li>
-      <li>Legal requirements</li>
-      <li>User feedback and requests</li>
-    </ul>
-    <p>Material changes will be communicated through app updates.</p>
+      <h3>User Control</h3>
+      <ul>
+        <li>You maintain full control over your health data</li>
+        <li>You can revoke access to Apple Health at any time via Settings &rarr; Privacy &rarr; Health</li>
+        <li>You can delete individual workouts from your history</li>
+        <li>Deleted workouts are removed from both the app and Apple Health</li>
+      </ul>
 
-    <h3>Contact</h3>
-    <p>If you have questions about this privacy policy or our data practices, please contact us via the support button at the bottom of the page or contact the developer through the App Store.</p>
-    <p>Your health data is yours. We simply help you track and improve your fitness.<br>Useful Things LLC</p>
+      <h3>Bluetooth Data</h3>
+      <ul>
+        <li>Bluetooth connection to your Echo Bike is local only</li>
+        <li>No workout or health data is transmitted over the internet</li>
+        <li>Bike metrics (power, speed, cadence) are processed locally</li>
+      </ul>
+    </section>
+
+    <section class="privacy-section fade-in-up">
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>View all data collected about you within Apple Health</li>
+        <li>Delete any or all of your workout data</li>
+        <li>Revoke app access to Apple Health at any time</li>
+        <li>Request clarification about our data practices</li>
+      </ul>
+    </section>
+
+    <section class="privacy-section fade-in-up">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy to reflect changes in:</p>
+      <ul>
+        <li>App functionality</li>
+        <li>Legal requirements</li>
+        <li>User feedback and requests</li>
+      </ul>
+      <p>Material changes will be communicated through app updates.</p>
+    </section>
+
+    <section class="privacy-section fade-in-up">
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy or our data practices, please <a href="support.html" style="color: var(--accent);">contact us</a> or reach out via the App Store.</p>
+    </section>
   </div>
 
   <!-- Quote Section -->
-  <section class="privacy-quote">
-    <blockquote>Your health data is yours. We simply help you track and improve your fitness.</blockquote>
-    <cite>Useful Things LLC</cite>
+  <section class="section" style="background: var(--bg-secondary); text-align: center;">
+    <div class="container">
+      <blockquote class="fade-in-up" style="font-size: clamp(24px, 4vw, 36px); font-weight: 600; line-height: 1.4; max-width: 700px; margin: 0 auto var(--space-lg);">
+        "Your health data is yours. We simply help you track and improve your fitness."
+      </blockquote>
+      <p class="fade-in-up delay-100" style="color: var(--text-muted); font-size: 14px;">Useful Things LLC</p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <a href="index.html" class="footer-logo">
-          <img class="footer-logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
-          Useful Things
-        </a>
-        <nav class="footer-links">
-          <a href="privacy.html">Vindr Privacy Policy</a>
-          <a href="mailto:support@usefulthings.com">Support</a>
-        </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img class="footer-logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
+            <span>Useful Things</span>
+          </a>
+          <p class="footer-tagline">Building apps that make your life better.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Apps</h4>
+          <nav class="footer-links">
+            <a href="apps/vindr.html" class="footer-link">Vindr</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <nav class="footer-links">
+            <a href="support.html" class="footer-link">Support</a>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <nav class="footer-links">
+            <a href="mailto:usefulthingsllc@gmail.com" class="footer-link">usefulthingsllc@gmail.com</a>
+          </nav>
+        </div>
       </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="X (Twitter)">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span data-year></span> Useful Things LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
