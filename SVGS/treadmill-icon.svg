@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Running deck with rounded ends -->
+  <rect x="4" y="46" width="54" height="7" rx="3.5" fill="#5BC0BE"/>
+  <!-- Curved upright post -->
+  <path d="M12 46 Q8 28 12 12" stroke="#5BC0BE" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Small console -->
+  <rect x="6" y="6" width="12" height="6" rx="2" fill="#5BC0BE"/>
+  <!-- Straight angled handlebar connected to post -->
+  <path d="M14 18 L34 26" stroke="#5BC0BE" stroke-width="4" stroke-linecap="round"/>
+</svg>
