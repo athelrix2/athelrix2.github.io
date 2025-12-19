@@ -172,7 +172,7 @@ input, textarea, select {
   left: 0;
   right: 0;
   height: var(--header-height);
-  z-index: 1000;
+  z-index: 9999;
   transition: all var(--transition-base);
 }
 
@@ -281,13 +281,18 @@ input, textarea, select {
 .mobile-nav {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: #0a0a0a;
   padding-top: var(--header-height);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 999;
+  z-index: 9998;
   transition: all var(--transition-base);
 }
 
@@ -298,6 +303,8 @@ input, textarea, select {
 }
 
 .mobile-nav-inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
