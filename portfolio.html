@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin Rolf | Portfolio</title>
+  <meta name="description" content="Justin Rolf - Aspiring Logistics Manager and Army Veteran with 4+ years of experience in leadership, logistics, and training development.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Justin Rolf | Portfolio">
+  <meta property="og:description" content="Aspiring Logistics Manager and Army Veteran with expertise in strategic planning and operational excellence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://athelrix2.github.io/portfolio.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/Favicon.png">
+
+  <style>
+    .portfolio-hero {
+      padding: calc(var(--space-3xl) + 80px) var(--space-lg) var(--space-2xl);
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    }
+
+    .portfolio-hero h1 {
+      font-size: clamp(36px, 7vw, 56px);
+      margin-bottom: var(--space-sm);
+    }
+
+    .portfolio-hero .tagline {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: var(--space-md);
+    }
+
+    .portfolio-hero .summary {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .portfolio-section {
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .portfolio-section:nth-child(even) {
+      background: var(--bg-secondary);
+    }
+
+    .portfolio-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .portfolio-section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .portfolio-section-title i {
+      width: 20px;
+      height: 20px;
+    }
+
+    .experience-item {
+      margin-bottom: var(--space-xl);
+      padding-bottom: var(--space-xl);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .experience-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .experience-company {
+      font-size: 16px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .experience-date {
+      font-size: 14px;
+      color: var(--text-muted);
+      background: var(--bg-tertiary);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+    }
+
+    .experience-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .experience-details li {
+      position: relative;
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .experience-details li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .skill-card {
+      background: var(--bg-tertiary);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .skill-card i {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      padding: var(--space-lg);
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .education-degree {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .education-school {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .education-year {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+
+    .cert-card {
+      background: var(--bg-tertiary);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      border-left: 3px solid var(--accent);
+      transition: transform 0.2s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateX(4px);
+    }
+
+    .cert-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+      color: var(--text-primary);
+    }
+
+    .cert-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .portfolio-cta {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-lg);
+    }
+
+    .portfolio-cta h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      margin-bottom: var(--space-md);
+    }
+
+    .portfolio-cta p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .social-links a i {
+      width: 18px;
+      height: 18px;
+    }
+
+    .highlight-stat {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
+        <span>Useful Things</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="apps/vindr.html" class="nav-link">Apps</a>
+        <a href="support.html" class="nav-cta">Support</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="apps/vindr.html" class="mobile-nav-link">Apps</a>
+      <a href="support.html" class="mobile-nav-link">Support</a>
+      <a href="privacy.html" class="mobile-nav-link">Privacy</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="portfolio-hero">
+    <h1 class="fade-in-up">Justin Rolf</h1>
+    <p class="tagline fade-in-up delay-100">Logistics Manager | Army Veteran | App Developer</p>
+    <p class="summary fade-in-up delay-200">
+      Army Veteran with 4+ years of proven experience in leadership, logistics, and training development.
+      Recognized for exceptional skills in strategic planning, resource management, and operational excellence.
+      Currently pursuing a B.S. in Accounting at Penn State University.
+    </p>
+    <div class="social-links fade-in-up delay-300">
+      <a href="https://www.linkedin.com/in/justin-rolf-26bb75178" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="linkedin"></i>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+      <h2 class="portfolio-section-title fade-in-up">
+        <i data-lucide="briefcase"></i>
+        Professional Experience
+      </h2>
+
+      <div class="experience-item fade-in-up delay-100">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-title">Warehouse 6, Facility Operations</h3>
+            <p class="experience-company">Iowa National Guard, Camp Dodge, IA</p>
+          </div>
+          <span class="experience-date">May 2025 - Sep 2025</span>
+        </div>
+        <ul class="experience-details">
+          <li>Issued, cleared, and inventoried billeting for military personnel at Camp Dodge</li>
+          <li>Conducted weekly rotational checks to ensure accountability and serviceability of managed property</li>
+          <li>Supervised work-release personnel assisting with maintenance, event setup, and area beautification</li>
+          <li>Coordinated and executed logistics for equipment supporting large-scale military events</li>
+          <li>Led ad hoc facility improvement projects such as installing racking systems</li>
+        </ul>
+      </div>
+
+      <div class="experience-item fade-in-up delay-200">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-title">Infantry Team Leader</h3>
+            <p class="experience-company">U.S. Army, Fort Campbell, KY</p>
+          </div>
+          <span class="experience-date">Aug 2021 - Feb 2025</span>
+        </div>
+        <ul class="experience-details">
+          <li>Led, trained, and mentored a fire team on technical skills, communications, land navigation, and professional development</li>
+          <li>Maintained accountability and operational readiness of <span class="highlight-stat">$10M+</span> in equipment with zero losses</li>
+          <li>Managed logistics for transportation and inventory of equipment during training and global operations</li>
+          <li>Demonstrated leadership in high-stress environments, fostering teamwork and mission success</li>
+          <li>Graduated as <span class="highlight-stat">top student</span> in Army Air Assault School, showcasing extreme attention to detail</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+      <h2 class="portfolio-section-title fade-in-up">
+        <i data-lucide="zap"></i>
+        Skills
+      </h2>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in-up delay-100">
+          <i data-lucide="users"></i>
+          <span>Leadership & Team Development</span>
+        </div>
+        <div class="skill-card fade-in-up delay-100">
+          <i data-lucide="map"></i>
+          <span>Strategic Planning & Logistics</span>
+        </div>
+        <div class="skill-card fade-in-up delay-200">
+          <i data-lucide="package"></i>
+          <span>Inventory & Asset Management</span>
+        </div>
+        <div class="skill-card fade-in-up delay-200">
+          <i data-lucide="graduation-cap"></i>
+          <span>Training & Mentorship</span>
+        </div>
+        <div class="skill-card fade-in-up delay-300">
+          <i data-lucide="shield-check"></i>
+          <span>Policy Compliance & Risk Management</span>
+        </div>
+        <div class="skill-card fade-in-up delay-300">
+          <i data-lucide="monitor"></i>
+          <span>Microsoft Office Suite</span>
+        </div>
+        <div class="skill-card fade-in-up delay-100">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Data Analysis & Visualization</span>
+        </div>
+        <div class="skill-card fade-in-up delay-100">
+          <i data-lucide="kanban"></i>
+          <span>Agile & Jira</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+      <h2 class="portfolio-section-title fade-in-up">
+        <i data-lucide="graduation-cap"></i>
+        Education
+      </h2>
+
+      <div class="education-item fade-in-up delay-100">
+        <div>
+          <h3 class="education-degree">B.S. in Accounting</h3>
+          <p class="education-school">Penn State University</p>
+        </div>
+        <span class="education-year">Expected 2027</span>
+      </div>
+
+      <div class="education-item fade-in-up delay-200">
+        <div>
+          <h3 class="education-degree">Associate of Arts</h3>
+          <p class="education-school">Hopkinsville Community College, KY</p>
+        </div>
+        <span class="education-year">2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+      <h2 class="portfolio-section-title fade-in-up">
+        <i data-lucide="award"></i>
+        Certifications
+      </h2>
+
+      <div class="cert-grid">
+        <div class="cert-card fade-in-up delay-100">
+          <h4>Atlassian Agile Project Management Professional Certificate</h4>
+          <p>LinkedIn Learning & Atlassian | Oct 2024</p>
+        </div>
+        <div class="cert-card fade-in-up delay-100">
+          <h4>Career Essentials in Data Analysis</h4>
+          <p>Microsoft & LinkedIn | Sep 2024</p>
+        </div>
+        <div class="cert-card fade-in-up delay-200">
+          <h4>OSHA-10 Construction Industry</h4>
+          <p>Occupational Safety and Health Administration</p>
+        </div>
+        <div class="cert-card fade-in-up delay-200">
+          <h4>Army Risk Management Basic Course</h4>
+          <p>U.S. Army</p>
+        </div>
+        <div class="cert-card fade-in-up delay-300">
+          <h4>Helicopter Logistics Training</h4>
+          <p>U.S. Army</p>
+        </div>
+        <div class="cert-card fade-in-up delay-300">
+          <h4>Army Leadership Course</h4>
+          <p>U.S. Army</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="portfolio-cta">
+    <h2 class="fade-in-up">Let's Connect</h2>
+    <p class="fade-in-up delay-100">Interested in working together or have questions?</p>
+    <a href="support.html" class="btn btn-primary fade-in-up delay-200">
+      Get in Touch
+      <i data-lucide="send"></i>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img class="footer-logo-icon" src="Images/575EE3AD-E31D-4547-BC4B-F1126F66CF35.png" alt="Useful Things">
+            <span>Useful Things</span>
+          </a>
+          <p class="footer-tagline">Building apps that make your life better.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/justin-rolf-26bb75178" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Apps</h4>
+          <nav class="footer-links">
+            <a href="apps/vindr.html" class="footer-link">Vindr</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <nav class="footer-links">
+            <a href="support.html" class="footer-link">Support</a>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span data-year></span> Useful Things LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
